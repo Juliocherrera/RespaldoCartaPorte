@@ -173,7 +173,7 @@ function vertblcartaporte() {
 				
             ],
 			"order": [[ 0, "desc" ]],
-                        "pageLength":100
+                        "pageLength":25
 			
         });
 }

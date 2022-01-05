@@ -36,7 +36,9 @@ function vertblerror() {
                 { "data": "Erro5" },
                 { "data": "Erro6" },
                 { "data": "Erro7" }
-            ]
+            ],
+            "order": [[ 0, "desc" ]],
+                        "pageLength":50
         });
     
 }

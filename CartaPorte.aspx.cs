@@ -395,7 +395,7 @@ public partial class CartaPorte : System.Web.UI.Page
         List<CartaPorterest> lista = new List<CartaPorterest>();
 
         DataTable data = new DataTable();
-        data = sql.ObtieneTabla("SELECT TOP 600 Folio, Serie, UUID, Pdf_xml_descarga, Pdf_descargaFactura, replace(xlm_descargaFactura,'}','') as xml_descargaFactura, replace(cancelFactura,'}','') as cancelFactura, LegNum, Fecha, Total, Moneda, RFC,Origen, Destino FROM VISTA_Carta_Porte ORDER BY FECHA DESC");
+        data = sql.ObtieneTabla("SELECT TOP 25 Folio, Serie, UUID, Pdf_xml_descarga, Pdf_descargaFactura, replace(xlm_descargaFactura,'}','') as xml_descargaFactura, replace(cancelFactura,'}','') as cancelFactura, LegNum, Fecha, Total, Moneda, RFC,Origen, Destino FROM VISTA_Carta_Porte ORDER BY FECHA DESC");
         if (data.Rows.Count > 0)
         {
             for (int i = 0; i < data.Rows.Count; i++)

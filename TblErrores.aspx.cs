@@ -29,7 +29,7 @@ public partial class TblErrores : System.Web.UI.Page
         List<ErroresCP> lista = new List<ErroresCP>();
 
         DataTable data = new DataTable();
-        data = sql.ObtieneTabla("SELECT TOP 600 * FROM VISTA_Carta_Porte_Errores ORDER BY Fecha desc");
+        data = sql.ObtieneTabla("SELECT TOP 50 * FROM VISTA_Carta_Porte_Errores ORDER BY Fecha desc");
         if (data.Rows.Count > 0)
         {
             for (int i = 0; i < data.Rows.Count; i++)

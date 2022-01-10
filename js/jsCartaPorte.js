@@ -110,6 +110,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
+
 Swal.fire({
   title: 'Cancelar Carta Porte ' + leg +' ?',
   text: "Esta accion no podra ser revertida!",
@@ -167,9 +168,7 @@ function vertblcartaporte() {
                 { "data": "Fecha" },
                 { "data": "Total" },
                 { "data": "Moneda" },
-                { "data": "RFC" },
-				{ "data": "Origen" },
-				{ "data": "Destino" }
+                { "data": "RFC" }
 				
             ],
 			"order": [[ 0, "desc" ]],

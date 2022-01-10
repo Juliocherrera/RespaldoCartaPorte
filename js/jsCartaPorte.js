@@ -103,7 +103,7 @@ function validacarta(leg) {
 }
 
 function cancelCP(urlcancel, leg){
- var texto = 'https://canal1.xsa.com.mx:9050/bf2e1036-ba47-49a0-8cd9-e04b36d5afd4/cfdis/cancelar?data:{"motivo": "02","uuid": ["'+urlcancel+'","'+urlcancel+'"]}'
+ var texto = 'https://canal1.xsa.com.mx:9050/bf2e1036-ba47-49a0-8cd9-e04b36d5afd4/cfdis/cancelar?data:{"motivo":"02","uuid":["'+urlcancel+'","'+urlcancel+'"]}'
 var requestOptions = {
   method: 'POST',
   mode: 'no-cors',

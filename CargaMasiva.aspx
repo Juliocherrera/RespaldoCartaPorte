@@ -17,103 +17,71 @@
                     </div>
                 </div>
             </div>
-
+            <form id="form1" runat="server">
+                <div class="container-fluid mt-4">
+                        <div class="card">
+                         <div class="card-header">
+                           Cargar Archivo
+                         </div>
+                         <div class="card-body">
+                           <div class="row">
+                               
+                               <div class="col-sm-12">
+                                   <div class="form-row">
+                                       <%--<div class="form-group col-sm-10">
+                                         <label for="txtName">Numero de orden</label>
+                                           <asp:TextBox ID="txtName" CssClass="form-control" runat="server" Width="140" />
+                                           
+                                       </div>--%>
+                                       <div class="form-group col-sm-10">
+                                         <label for="FileUpload1">Archivo</label>
+                                           <asp:FileUpload ID="FileUpload1" CssClass="form-control-file" runat="server" required="true"/>
+                                           
+                                       </div>
+                                       <div class="form-group col-sm-2">
+                                         <asp:Button ID="Button1" runat="server" Text="Cargar" CssClass="btn btn-block btn-success mt-4" OnClick="Button1_Click" />
+                                       </div>
+                                   </div>
+                               </div>
+       
+                           </div>
+                             <hr />
+                          <div class="row">
+                              <div class="col-sm-12">
+                                  <div class="card">
+                                 <div class="card-header p-1">
+                                   Registros Cargados
+                                 </div>
+                                 <div class="card-body">
+                                     <asp:GridView ID="GridView1" runat="server" CssClass="table table-bordered mitabla table-hover"></asp:GridView>
+                                 </div>
+                               </div>
+                            </div>
+                              
+       
+                          </div>
+                         </div>
+                       </div>
+               </div>
+       
+               
+               <%--<div>
+                   
+                   <br />
+                   <br />
+                  
+               </div>
+               <br />
+               <div>
+                   <asp:Label ID="lblrespuesta" runat="server"></asp:Label>
+               </div>--%>
+               
+           </form>
            
-            <div style="display:none !important" class="row">
-                <div class="col-md-2">
-                    <p>Compañia<input class="form-control" id="inputleg" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Tipo<input class="form-control" id="inputtipo" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Fecha<input class="form-control" id="inputfecha" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Subtotal<input class="form-control" id="inputsubtotal" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Total imp trasladado<input class="form-control" id="inputTotalimptrasl" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Total imp retenido<input class="form-control" id="inputTotalimpreten" type="text" /></p>
-                </div>
-            </div>
-            <div style="display:none !important" class="row">
-                <div class="col-md-2">
-                    <p>Descuentos<input class="form-control" id="inputDescuentos" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Total<input class="form-control" id="inputTotal" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>FormaPago<input class="form-control" id="inputFormaPago" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Condipago<input class="form-control" id="inputCondipago" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Condipago<input class="form-control" id="inputMetodoPago" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Moneda<input class="form-control" id="inputMoneda" type="text" /></p>
-                </div>
-            </div>
-            <div style="display:none !important" class="row">
-                <div class="col-md-2">
-                    <p>RFC<input class="form-control" id="inputRFC" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Codigo SAT<input class="form-control" id="inputCodSAT" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Id Producto<input class="form-control" id="inputIdProducto" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Producto<input class="form-control" id="inputProducto" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Clave origen<input class="form-control" id="inputOrigen" type="text" /></p>
-                </div>
-                <div class="col-md-2">
-                    <p>Clave destino<input class="form-control" id="inputDestino" type="text" /></p>
-                </div>
-            </div>
+            
         </div>
 
-        <div class="container-fluid px-2">
-            <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="card-header">
-                        <i class="fas fa-table me-1"></i>
-                        Cartas Porte Generadas:
-                    </div>
-                    <div class="table-responsive">
-                        <table id='tabledataCPD' class="table" >
-                            <thead>
-                                <tr>
-                                    <th>Folio</th>
-                                    <th>Serie</th>
-                                    <th>UUID</th>
-                                    <th>ZIP</th>
-                                    <th>PDF</th>
-                                    <th>XML</th>
-                                    <th>Cancelar</th>
-                                    <th>Segmento</th>
-                                    <th>Fecha</th>
-                                    <th>Total</th>
-                                    <th>Moneda</th>
-                                    <th>RFC</th>
-                                    <th style="display:none !important">Origen</th>
-                                    <th style="display:none !important">Destino</th>
-                                </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
+        
     </main>
 
 

@@ -103,22 +103,18 @@ function validacarta(leg) {
 }
 
 function cancelCP(urlcancel, leg){
-    var myHeaders = new Headers();
-myHeaders.append("Content-Type", "application/json");
-
-var raw = JSON.stringify({
-  "motivo": "02",
-  "uuid": ["'"+urlcancel+"'"]
-});
- var texto = 'https://canal1.xsa.com.mx:9050/bf2e1036-ba47-49a0-8cd9-e04b36d5afd4/cfdis/cancelar?'
- var requestOptions = {
+ var texto = urlcancel
+ var raw = JSON.stringify({
+    "motivo": "02",
+    "uuid": [
+      "F16988E5-8FBD-42D1-9F99-1F472908F2B1"
+    ]
+  });
+var requestOptions = {
   method: 'POST',
-  headers: myHeaders,
-  body: raw,
   mode: 'no-cors',
   redirect: 'follow'
 };
-
 
 Swal.fire({
   title: 'Cancelar Carta Porte ' + leg +' ?',
@@ -177,7 +173,9 @@ function vertblcartaporte() {
                 { "data": "Fecha" },
                 { "data": "Total" },
                 { "data": "Moneda" },
-                { "data": "RFC" }
+                { "data": "RFC" },
+				{ "data": "Origen" },
+				{ "data": "Destino" }
 				
             ],
 			"order": [[ 0, "desc" ]],

@@ -124,6 +124,16 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Historial Errores
                         </a>
+                        <a class="nav-link" href="http://69.20.92.117:8081/">
+                            <div class="sb-nav-link-icon"><i class="fas fa-search"></i></div>
+                            Consulta general
+                           
+                        </a>
+                        <a class="nav-link" target="_blank" href="http://69.20.92.117:8080/Login.aspx">
+                            <div class="sb-nav-link-icon"><i class="fas fa-file-upload"></i></div>
+                            Carga masiva
+                           
+                        </a>
                         <%--  <a class="nav-link" href="Default.aspx">
                             <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                             Mapa
